@@ -27,6 +27,7 @@
       <ion-content class="ball-center-content padding" scroll="false" ng-controller="PredictionController">
 	      <img class="logo" src="img/download.png" alt="" ng-click="ask()">
 	      <p class="prediction" ng-class="{&apos;show&apos;:answered}">{{ prediction }}</p>
+        <p class="prediction" style="font-size: 16px;margin-top: 45px;" ng-class="{&apos;show&apos;:answered}">{{ translation }}</p>
       </ion-content>
     </ion-pane>
   </body>

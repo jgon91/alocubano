@@ -20,20 +20,37 @@ app.controller('PredictionController', function ($scope, $timeout) {
 		"Que bolaaa",
 		"Eres tremenda",
 		"Voy bajando",
+    "Voy hechando",
 		"Acere!",
 		"Tu eres mongo, o que?",
 		"Estas en llama!",
 		"Guanikiki"
 	];
+	var translations = [
+    "Translation: What's up?",
+    "Translation: Eres tremenda",
+    "Translation: I'm leaving",
+    "Translation: I'm leaving",
+    "Translation: Brother(Friend)!",
+    "Translation: Are you stupid, or what?",
+    "Translation: You're in trouble!",
+    "Translation: Money"
+
+  ];
 
 	$scope.prediction = "Toca el Cubano";
+	$scope.translation = "";
 	$scope.answered = true;
 
 	$scope.ask = function() {
+
 		$scope.answered = false;
+    $scope.translation = "";
 		$scope.prediction = "El Cubano dice...";
 		$timeout(function () {
-			$scope.prediction = predictionList[Math.floor(Math.random() * predictionList.length)];
+      var number = Math.floor(Math.random() * predictionList.length)
+      $scope.prediction = predictionList[number];
+      $scope.translation = translations[number];
 			$scope.answered = true;
 		}, 2000);
 
