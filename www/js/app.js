@@ -1,4 +1,4 @@
-var app = angular.module('8ball', ['ionic']);
+var app = angular.module('ALoCubano', ['ionic']);
 
 app.run(function ($ionicPlatform) {
 	$ionicPlatform.ready(function () {
